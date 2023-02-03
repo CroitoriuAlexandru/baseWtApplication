@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages>
+
+	<message id='login-form-template'>
+
+		<form class="form text-center border-top border-3">
+			<h3 class="m-2">${title}</h3>
+
+			<div class="form-floating mb-3">
+				${user-email class="form-control" id="floatingInput"}
+				<label for="${id:user-email}">${email-label}</label>
+			</div>
+
+			<div class="form-floating mb-3">
+				${user-password class="form-control" id="floatingInput"}
+				<label for="${id:user-password}">${password-label}</label>
+			</div>
+
+			<div class="d-flex justify-content-between py-1">
+				<div class="">
+					${submit-button type="button" class="btn btn-success"}
+				</div>
+				<div class="d-flex flex-column">
+					<span class="text-danger">${submit-info-danger}</span>
+					<span class="text-success">${submit-info-success}</span>
+					<span class="text">${submit-info}</span>
+				</div>
+			</div>
+
+
+		</form>
+
+	</message>
+
+	<message id='registration-form-template'>
+
+		<form class="form text-center border-top border-3">
+			<h3 class="m-2">${title}</h3>
+
+			<div class="form-floating mb-3">
+				${user-name class="form-control" id="floatingInput"}
+				<label for="${id:user-name}">${name-label}</label>
+			</div>
+
+			<div class="form-floating mb-3">
+				${user-email class="form-control" id="floatingInput"}
+				<label for="${id:user-email}">${email-label}</label>
+			</div>
+
+			<div class="form-floating mb-3">
+				${user-password class="form-control" id="floatingInput"}
+				<label for="${id:user-password}">${password-label}</label>
+			</div>
+
+			<div class="form-floating mb-3">
+				${user-password-repeat class="form-control" id="floatingInput"}
+				<label for="${id:user-password}">${password-repeat-label}</label>
+			</div>
+
+			<div class="d-flex justify-content-between py-1">
+				<div class="">
+					${submit-button type="button" class="btn btn-success"}
+				</div>
+				<div class="d-flex flex-column">
+					<span class="text-success text-wrap">${submit-info-success}</span>
+					<span class="text-danger text-wrap">${submit-info-danger}</span>
+					<span class="text text-wrap">${submit-info}</span>
+				</div>
+			</div>
+
+		</form>
+
+	</message>
+
+</messages>
+

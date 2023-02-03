@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages>
+	<message id='register-event-btn'>
+		<button type="button" class="btn btn-lg btn-outline-dark">
+			Register Event
+		</button>
+	</message>
+
+	<message id='food-icon'>
+		<button type="button" class="btn btn-lg btn-outline-dark">
+			<i class="bi bi-egg-fried"></i>
+		</button>
+	</message>
+	
+	<message id='drag-btn'>
+		<button type="button" class="btn btn-info">
+			<i class="bi bi-grip-vertical"></i>
+		</button>
+	</message>
+	
+	<message id='dropdown-btn'>
+		<button type="button" class="btn btn-warning">
+			<i class="bi bi-chevron-down text-dark bold hover"></i>
+		</button>
+	</message>
+	
+	<message id='add-service-btn'>
+		<button type="button" class="btn btn-lg btn-primary">Add Service</button>
+	</message>
+	
+	<message id='close-service-btn'>
+		<button type="button" class="btn btn-danger">
+			<i class="bi bi-x-square-fill text-white hover"></i>
+		</button>
+	</message>
+	
+	<message id='event-registration-form'>
+		<form class="form-inline border-left shadow bg-body rounded p-4 mt-1">
+			<div class="form-floating my-3">
+				${event-date class="form-control" }
+				<label class="form-control=sm" for="${id:event-date}">
+					Event <b>Date</b>
+				</label>
+			</div>
+			<hr class="mb-2"/>
+			<div class="form-floating mb-3">
+				${client-name class="form-control" }
+				<label for="${id:client-name}">Client <b>Name</b>
+			</label>
+			</div>
+			<div class="form-floating mb-3">
+				${client-phone class="form-control" }
+				<label  for="${id:client-phone}">Client <b>Phone</b></label>
+			</div>
+			<div class="row">
+
+
+				<div class="form-floating mb-3 col-md-6">
+					${event-start class="form-control" }
+					<label  for="${id:event-start}">Start <b>Time</b></label>
+				</div>
+
+				<div class="form-floating mb-3 col-md-6">
+					${event-duration class="form-control" }
+					<label  for="${id:event-duration}">
+						<b>Duration</b>
+					</label>
+				</div>
+			</div>
+			                <div class="form-floating mb-3">
+				${event-location class="form-control" }
+				<label  for="${id:event-location}">
+					<b>Location</b>
+				</label>
+			</div>
+			<div class="form-floating mb-3">
+				${event-observations class="form-control" }
+				<label  for="${id:event-observations}">
+					<b>Observations</b></label>
+			</div>
+			<span class="help-inline text-danger">${submit-info}</span>
+		</form>
+	</message>
+	
+	<message id='service-form-header'>
+		${service-close-btn}
+		${service-title class="m-auto text-center text-white w-100" placeholder="Service Title"}
+		${service-drag-btn}
+		${service-dropdown-btn}
+	</message>
+
+	<message id='service-form'>
+		<form class="form-inline border-left shadow bg-body rounded event-form p-3 pb-1 mb-1">
+				<div class="form-floating mb-3">
+					${provider-identity class="form-control" }
+					<label for="${id:provider-identity}">Provider Name</label>
+				</div>
+				<div class="row">
+
+					<div class="form-floating mb-3 col-md-6">
+						${service-start class="form-control" }
+						<label  for="${id:service-start}"> Start</label>
+					</div>
+
+					<div class="form-floating mb-3 col-md-6">
+						${service-duration class="form-control" }
+						<label  for="${id:service-duration}"> Durata Ore</label>
+					</div>
+					
+				</div>
+				<div class="form-floating mb-3">
+					${service-cost class="form-control" }
+					<label  for="${id:service-cost}">Cost</label>
+				</div>
+				<div class="form-floating mb-3">
+					${service-description class="form-control" }
+					<label  for="${id:service-description}">Descriere serviciu</label>
+				</div>
+				<div class="form-floating mb-3">
+					${service-observations class="form-control" }
+					<label  for="${id:service-observations}">Observatii Suplimentare</label>
+				</div>
+				<span class="help-inline text-danger">${submit-info}</span>
+			</form>
+	</message>
+
+
+	<message id='workload'>
+		<div class="workload bg-light mt-3">
+		<div class=" workload__header bg-info">
+			<div class="btn btn-danger">close</div>
+		</div>
+		<div class="workload__body bg-success">
+
+			<div class="work-item">
+				<div class="work-item__head">
+					<div class="d-flex justify-content-start align-items-center w-100 m-3 my-2">
+						<img src="images/alex.jpg" alt="alex pic" width="45" height="45"
+                            class="rounded-circle flex-grow roudedUserImg" />
+						<h4 class="h4 text-white ms-2 m-auto flex-grow">
+							<span class="">Alex</span>
+						</h4>
+					</div>
+				</div>
+
+
+
+				<div class="work-item__body jsScroll">
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+					<div class="work-item__body__item">a</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</message>
+
+</messages>
+

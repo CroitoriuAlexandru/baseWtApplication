@@ -1,0 +1,33 @@
+@use "variables";
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: variables.$body-width;
+    height: variables.$body-height;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar-track {
+    position: absolute; 
+    --webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
