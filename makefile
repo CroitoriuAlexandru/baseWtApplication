@@ -13,7 +13,7 @@ SRCDIR = ./src
 OBJDIR = ./src/obj
 
 # Linking lib
-LDFLAGS = -lwthttp -lwt -lwtdbo -lpthread -lIce++11
+LDFLAGS = -lwthttp -lwt -lwtdbo -lpthread
 ###	-lwthttp library implements the webserver that implements HTTP(S) and WebSockets
 ### -lwt library 
 ### -lwtdbo library 
@@ -21,7 +21,7 @@ LDFLAGS = -lwthttp -lwt -lwtdbo -lpthread -lIce++11
 ### -lwtdbosqlite3
 
 # Runtime lib
-RLIB = --docroot . --http-address 0.0.0.0 --http-port 9091
+RLIB = --docroot . --http-address 0.0.0.0 --http-port 9090
 
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))
