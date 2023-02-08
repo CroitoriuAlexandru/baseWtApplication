@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
     nano \
     cmake \
     build-essential \
-    libboost-all-dev 
+    libboost-all-dev \
+    zeroc-ice-all-dev
 
 RUN git clone https://github.com/emweb/wt.git wt && \
     cd wt/ && \
