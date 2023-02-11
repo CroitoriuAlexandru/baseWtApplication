@@ -1,19 +1,14 @@
-# Use the latest version of Ubuntu as the base image
-FROM ubuntu:latest
+FROM ubuntu:latest as wt
 
-# Set up an environment variable for the maintainer
-ENV MAINTAINER="Croitoriu Alexandru Dan"
-
-# Run updates and install the necessary packages for an interactive terminal
+# install necesary tools
 RUN apt-get update && apt-get install -y \
-    curl \
     git \
-    nano \
     cmake \
     build-essential \
     libboost-all-dev \
     zeroc-ice-all-dev
 
+# Build step
 RUN git clone https://github.com/emweb/wt.git wt && \
     cd wt/ && \
     mkdir build && \ 
@@ -22,10 +17,30 @@ RUN git clone https://github.com/emweb/wt.git wt && \
     make && \
     make install 
 
-# Start nginx when the container starts
-CMD ["nginx", "-g", "daemon off;"]
+# copy wt lib from usr/local/lib to usr'lib
+RUN cp /usr/local/lib/libwt*.so.* /usr/lib/
 
-RUN export LD_LIBRARY_PATH=/usr/local/lib
+RUN git clone https://github.com/CroitoriuAlexandru/baseWtApplication.git && \
+    cd baseWtApplication && \
+    make
 
-# Expose the default port for the application
+# #################### Deployment image starts here ####################
+
+# Final image to run the application
+FROM ubuntu:latest
+
+# application dependencie libraries
+RUN apt-get update && apt-get install -y \
+    zeroc-ice-all-dev
+
+# import Wt from the builder image and the app.exe
+COPY --from=wt /usr/lib/libwt*.so.* /usr/lib/
+copy --from=wt /usr/include/boost/* /usr/include/boost/
+copy --from=wt /usr/lib/x86_64-linux-gnu/libboost* /usr/lib/x86_64-linux-gnu/
+
+copy --from=builder /resources/* /application/resources
+copy --from=builder /baseWtApplication/myApp /application/
+
+CMD ./myApp docroot . --http-address 0.0.0.0 --http-port 9090
+
 EXPOSE 9090
