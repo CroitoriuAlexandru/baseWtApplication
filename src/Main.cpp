@@ -8,7 +8,6 @@ std::unique_ptr<Wt::WApplication> createApplication(const Wt::WEnvironment& env)
 	auto app = std::make_unique<Wt::WApplication>(env);
 	// Set up application resourses and settings
 	app->setTitle("Base Wt Application");
-	app->setTheme(std::make_shared<Wt::WBootstrap5Theme>());
 
 	// import resources
 	app->useStyleSheet("resources/styles/dist/style.css");
