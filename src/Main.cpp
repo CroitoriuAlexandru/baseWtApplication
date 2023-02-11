@@ -2,7 +2,6 @@
 #include <Wt/WApplication.h>
 #include <Wt/WServer.h>
 #include <Wt/Dbo/Exception.h>
-#include <Wt/WBootstrap5Theme.h>
 
 std::unique_ptr<Wt::WApplication> createApplication(const Wt::WEnvironment& env)
 {
